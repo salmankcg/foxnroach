@@ -1,0 +1,737 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+$finn: #552448;
+$pearl_bush: #e0d8ce;
+$whiskey: #D29069;
+$bay_of_many: #284285;
+$stiletto: #9F3232;
+$gray: #828282;
+$highland: #6E8869;
+$mineShaft: #333333;
+$title_font: 'Prata', serif;
+$body_font: 'Open Sans', sans-serif;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: calc(100vw / 1600 * 10);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $title_font;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+p,
+span {
+  font-family: $body_font;
+  font-style: normal;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.container {
+  @media only screen and (min-width: 1200px) {
+    max-width: 1200px !important;
+  }
+}
+
+.sliders {
+  background-color: $finn;
+  height: calc(100vh - 9rem);
+  color: $pearl_bush;
+  text-align: center;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .owl-item {
+    border: 2px dashed $pearl_bush;
+    border-width: thin;
+    box-sizing: border-box;
+    border-radius: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 25rem);
+    overflow: hidden;
+  }
+
+  .owl-carousel .owl-stage-outer {
+    overflow: visible;
+  }
+
+  h1 {
+    font-size: 12rem;
+    line-height: 14.4rem;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  p {
+    font-size: 3.2rem;
+    line-height: 4.8rem;
+    text-transform: capitalize;
+  }
+
+  .owl-carousel .owl-nav button.owl-next {
+    border: 1px solid $pearl_bush !important;
+    border-radius: 100% !important;
+    padding: 12.5px 20px !important;
+  }
+
+  .owl-theme .owl-nav [class*="owl-"]:hover {
+    background-color: $finn !important;
+  }
+
+  .owl-theme .owl-nav {
+    margin-top: 3.5rem;
+  }
+
+  .single__title {
+    margin-top: -4.5rem;
+  }
+}
+
+.visionary {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 9rem);
+
+  .col-12 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__inner {
+    h1 {    
+      font-size: 16vw;
+      font-size: 24.9rem;
+      line-height: normal;
+      color: $finn;
+      margin: 0 9rem 0 -4.3rem;
+      text-transform: uppercase;
+      z-index: 100;
+      position: relative;
+    }
+  
+    p {    
+      font-size: 4.3rem;
+      line-height: 5.6rem;
+      width: 52.2rem;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      color: $finn;
+      z-index: 100;
+      position: relative;
+    }
+  }  
+
+  &__title {    
+    font-size: 16vw;
+    font-size: 24.9rem;
+    line-height: normal;
+    text-align: right;
+    text-transform: uppercase;
+    color: $finn;
+    z-index: 100;
+    position: relative;
+    margin-right: -3.3rem;
+    margin-top: -5.8rem;
+  }
+
+  .circle {
+    position: absolute;   
+    height: 70rem;
+    width: 70rem;
+    left: 29.6rem;
+    top: calc(50% - 35rem);
+    border-radius: 100%;
+    border: 3px dashed $pearl_bush;
+    left: 45%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    z-index: 0;
+    cursor: pointer;
+
+    &:hover {
+      transition: all .5s ease;
+      // transform: scale(1.5);
+      left: 25%;
+    }
+  }
+}
+
+.culture,
+.brand,
+.growth,
+.innovation {
+  background-image: url(../images/cultureBanner3.png);
+  background-position: center center;
+  background-size: cover;
+  transition: all .5s ease;
+  overflow: hidden;
+
+  .row {
+    height: calc(100vh - 90px);
+  }
+
+  h1 {
+    font-size: 20.9vw;
+    margin-left: -45px;
+    color: white;
+    color: $pearl_bush;
+    z-index: 999;
+    cursor: pointer;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+}
+
+.brand {
+  background-image: url(../images/brandBanner.png);
+
+  h1 {
+    font-size: 28vw;
+    margin-left: -5vw;
+  }
+}
+
+.growth {
+  background-image: url(../images/growthBanner.png);
+
+  h1 {
+    font-size: 21.5vw;
+    margin-left: -4vw;
+  }
+}
+
+.innovation {
+  background-image: url(../images/innovatioBanner.png);
+
+  h1 {
+    font-size: 15.4vw;
+    margin-left: -3vw;
+  }
+}
+
+.cultureHover {
+  &:hover {
+    background-image: url(../images/cultureHover.png);
+    transition: all .5s ease;
+  }
+}
+
+.brandHover {
+  &:hover {
+    background-image: url(../images/brandBannerHover.png);
+    transition: all .5s ease;
+  }
+}
+
+.growthHover {
+  &:hover {
+    background-image: url(../images/growthHover.png);
+    transition: all .5s ease;
+  }
+}
+
+.innovationHover {
+  &:hover {
+    background-image: url(../images/innovationHover.png);
+    transition: all .5s ease;
+  }
+}
+
+.quote-section {
+  background-image: url(../images/quoteBanner.png);
+  background-repeat: no-repeat;
+  height: calc(100vh - 9rem);   
+  overflow: hidden;
+  background-size: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .quote__title {
+    position: absolute;
+    top: 0;
+  }
+
+  .quote {
+    width: 120rem;
+    margin: 0 auto;
+  }
+}
+
+.quote { 
+  span {    
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
+    display: block;
+    color: $gray;
+    text-transform: uppercase;
+  }
+}
+
+.quote__inner {
+  display: flex;
+  align-items: flex-start;
+
+  p {
+    font-size: 4.4rem;
+    line-height: 4.9rem;
+    color: $bay_of_many;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    color: $bay_of_many;
+    font-size: 12.4rem;
+    line-height: 16.7rem;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+  
+  img {
+    margin-right: 5.2rem;
+  }
+}
+
+.quote__title {
+  line-height: 4.1rem;
+  margin: 5rem 0 9.4rem 5rem;
+  text-transform: uppercase;
+  color: $bay_of_many;
+}
+
+
+
+.cover {
+  // background-color: $finn;
+  background: url(../images/RD_01.png);
+  background-size: cover;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: calc(100vh - 90px);
+  }
+
+  p {
+    font-size: 32px;
+    line-height: 45px;
+    color: white
+  }
+
+  h1 {    
+    font-size: 13.5vw;
+    line-height: normal;
+    text-transform: uppercase;
+    padding-top: 35px;
+    color: $pearl_bush;
+  }
+
+  .title {
+    height: 354px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed $pearl_bush;
+    border-radius: 150px;
+    width: 115%;
+
+    img {
+      width: 87%;
+    }
+  }
+}
+
+.cover-back {
+  background-image: url(../images/coverBack.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: calc(100vh - 90px);
+  }
+
+  p {
+    text-transform: uppercase;
+    font-size: 40px;
+    line-height: 54px;
+    color: $pearl_bush;
+    margin-left: 96px;
+  }
+
+  .logo {
+    width: max-content;
+    align-self: flex-end;
+    margin-right: 76px;
+  }
+
+  .title {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.unique-dna {
+  background-image: url(../images/dnaBanner.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 9rem);
+
+    span {
+      font-size: 16rem;
+      line-height: 16.3rem;
+      text-transform: uppercase;
+      color: $finn;
+      font-family: $title_font;
+    }
+
+    h1 {
+      font-size: 32rem;
+      line-height: 32.6rem;
+      text-align: right;
+      margin-right: -4rem;
+      color: $finn;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: 3.2rem;
+      line-height: 4.2rem;
+      margin-left: 13.5rem;
+      max-width: 67rem;
+      text-transform: uppercase;
+      color: $finn;
+      margin-top: 6.4rem;
+    }
+  }
+}
+
+.cultureQuote-section {
+  background-image: url(../images/cultureQuote.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
+  height: calc(100vh - 9rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .quote {
+    padding-top: 0;
+
+    span {
+      text-align: left;
+    }
+  }
+
+  .quote__title {
+    margin: 5rem 0 8.5rem 5rem;
+    text-transform: uppercase;
+    color: $whiskey;
+    font-size: 2.5rem;
+    line-height: 3.4rem;
+    position: absolute;
+    top: 0;
+  }
+  
+  .quote__inner {
+    display: flex;
+    margin-left: 5.5rem;
+    align-items: flex-start;
+    width: 131.9rem;
+  
+    img {
+      margin-right: 5.2rem;
+    }
+  
+    p {
+      font-size: 4.9rem;
+      line-height: 6.7rem;
+      color: $whiskey;
+      text-transform: uppercase;
+      font-family: $title_font;
+    }
+  
+    h1 {
+      color: $whiskey;
+      font-size: 12.5rem;
+      line-height: 16.9rem;
+      margin-bottom: 0;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.brandQuote-section {
+  background-image: url(../images/RD_11/brandQuoteCover.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top left;
+  height: calc(100vh - 9rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .quote__title {
+    font-size: 2.5rem;
+    line-height: 3.4rem;
+    color: $stiletto;
+    margin: 5rem 0 9.4rem 5rem;
+    position: absolute;
+    top: 0;
+  }
+
+  .quote {
+    padding-top: 0;
+
+    &__inner {
+      width: 99rem;
+      margin-left: 18rem;
+    }
+  }
+
+  p {
+    font-size: 4.2rem;
+    line-height: 5.6rem;   
+    color: $stiletto;
+    font-family: $title_font;
+  }
+
+  h1 {
+    font-size: 12.5rem;
+    line-height: 14.1rem;  
+    color: $stiletto;
+  }
+
+  .author {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5rem;
+
+    span {
+      text-align: left;
+      font-size: 2.5rem;
+      line-height: 3.4rem;
+    }
+  }
+}
+
+.growthQuote-section {
+  background-image: url(../images/growthQuoteCover.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top right;
+  height: calc(100vh - 9rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .quote__title {
+    font-size: 2.5rem;
+    line-height: normal;
+    color: $highland;
+    margin: 5rem 0 9.4rem 5rem;
+    position: absolute;
+    top: 0;
+  }
+
+  .quote {
+    padding-top: 0;
+    width: 119.5rem;
+    margin-left: 13.5rem;
+
+    span {
+      text-align: left;
+      font-size: 3rem;
+      line-height: 4.1rem;
+    }
+  }
+
+  p {
+    font-size: 5.2rem;
+    line-height: 7.1rem;
+    color: $highland;
+    font-family: $title_font;
+  }
+
+  h1 {
+    font-size: 15.9rem;
+    line-height: 17.9rem;
+    color: $highland;
+  }
+}
+
+.achivement {
+  background-image: url(../images/RD_02.png);
+  height: calc(100vh - 9rem);
+  display: flex;
+  align-items: center;
+  background-size: cover;
+
+  h3 {
+    font-size: 10rem;
+    line-height: 10.6rem;
+    margin-left: 13.5rem;
+    width: 92.5rem;
+    text-transform: uppercase;
+    color: $finn;
+  }
+
+  h1 {
+    font-size: 31rem;
+    line-height: 32.7rem;
+    text-align: right;
+    text-transform: uppercase;
+    color: $finn;
+    margin: 2.5rem -7rem 2.5rem 0;
+  }
+
+  .description {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  p {
+    font-size: 2.6rem;
+    line-height: 4.2rem;
+    color: $mineShaft;
+    width: 66rem;
+    margin-right: 13.5rem;
+  }
+}
+
+.skill {
+  background-image: url(../images/RD_04.svg);
+  background-size: cover;
+  height: calc(100vh - 9rem);
+  display: flex;
+  align-items: center;
+
+  p {
+    font-size: 4.5rem;
+    line-height: 5.9rem;
+    color: $finn;
+    text-transform: uppercase;
+    margin-left: 13.5rem;
+  }
+
+  .desc {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 13.5rem;
+
+    p {
+      text-align: right;
+    }
+  }
+
+  h1 {
+    font-size: 16rem;
+    line-height: 16.9rem;
+    text-align: left;
+    text-transform: uppercase;
+    color: $finn;
+  }
+
+  .title {
+    h1 {
+      &:first-child {
+        margin-left: -2.8rem;
+      }
+
+      &:last-child {
+        text-align: right;
+        margin-right: -2.8rem;
+      }
+    }
+  }
+
+  .title {
+    margin: 8.3rem 0 7.9rem;
+  }
+}
+
+.inspiration {
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 9rem);
+  background-image: url(../images/RD_22.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__inner {
+    & > div {
+      display: flex;
+
+      h1 {
+        font-size: 24.8rem;
+        // font-size: 14vw;
+        line-height: 33.6rem;
+        text-transform: uppercase;
+        color: $finn; 
+        margin-right: 7.4rem;
+        margin-left: -5.2rem;
+      }
+    }
+  }
+  
+  p {
+    font-size: 4.3rem;
+    line-height: 5.6rem;
+    text-transform: uppercase;
+    color: $finn;
+    width: 69.8rem;
+  }
+
+  h1 {
+    font-size: 24.8rem;
+    // font-size: 14vw;
+    line-height: 33.6rem;
+    margin-right: -10.4rem;
+    text-transform: uppercase;
+    color: $finn;
+    text-align: right;
+    margin-top: -10rem;    
+    margin-right: -10rem;
+  }
+}

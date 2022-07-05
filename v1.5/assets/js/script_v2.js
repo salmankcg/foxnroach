@@ -49,12 +49,14 @@ $(function() {
     // });
 
 
-    // $('.bt-play').on('click',function(){
-    //     $(this).parent().find('.video').addClass('show');
-    //     $(this).fadeOut(200);
-    //     $(this).parent().find('.title').fadeOut(200);
-    //     $(this).parent().find('.image-video').fadeOut(200);    
-    // });
+    $('.bt-video').on('click',function(e){
+        e.preventDefault();
+        $(this).closest('.slides').find('.video').addClass('show');
+    });
+
+    $('.bt-close').on('click',function(e){
+        $(this).closest('.video').removeClass('show');
+    });
 
     // $('.slide-27').find('.title').on('mouseenter',function(){
     //     $('.slide-27').addClass('show');
